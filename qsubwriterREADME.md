@@ -11,4 +11,5 @@ It is set up to be easily changeable for any other program, just go in to the sc
 2) change the bit between the speech marks in the 'export RUNFLAGS' line to the command line input of the program you want to run.
 3) change the between the speech marks in the 'export APPLICATION' line to the location of the program you want to run (You can find this using module avail to get the big list of modules, loading the module, and then using the which command)
 
-NOTES: THIS SCRIPT ASSUMES THAT IT IS RUNNING IN THE SAME DIRECTORY AS THE INTENDED RUN DIRECTORY.
+NOTES: THIS SCRIPT ASSUMES THAT IT IS RUNNING IN THE SAME DIRECTORY AS THE INTENDED RUN DIRECTORY. 
+IT ALSO ASSUMES THAT THE OUTPUT DIRECTORY IS A SUBSIDIARY OF THE RUN DIRECTORY.
