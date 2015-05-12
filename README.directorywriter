@@ -1,0 +1,15 @@
+Directory Writer is qsubwriter's big brother. Meaner and faster, it writes all the submission scripts for an entire directory.
+It sleeps to make sure you don't go over a submission quota and spam the queue.
+In order to run directorywriter, it requires first an input of the directory you desire to write your scripts to. Then give it the time in an 'Hour:Minute:Second' format, followed by the number of nodes and number of processors on the node that you want to work. THe input should look like this:
+If I want to run every phylip file in my current directory, for 2 hours, using 2 nodes with 9 processors each, I input:
+
+perl directorywriter.pl . 02:00:00 2 9
+
+Currently optimised for RAXML, taking phylip files as input, it can easily be adjusted as follows:
+1) Alter the 'module add' line to the program you want to run 
+2) change the bit between the speech marks in the 'export RUNFLAGS' line to the command line input of the program you want to run. 
+3) change the between the speech marks in the 'export APPLICATION' line to the location of the program you want to run (You can find this using module avail to get the big list of modules, loading the module, and then using the which command)
+
+NOTES: THIS SCRIPT CURRENTLY ASSUMES THAT IT IS RUNNING IN THE SAME DIRECTORY AS THE INTENDED RUN DIRECTORY. 
+IT ALSO ASSUMES THAT THE OUTPUT DIRECTORY IS A SUBSIDIARY OF THE RUN DIRECTORY.
+I AM WORKING ON FIXING THE FORMER. The latter I see as a feature.
