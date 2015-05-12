@@ -36,5 +36,6 @@ for i in $nodes; do
    echo ${i} >>$confile
 done
 # Execute the code ------------------------------------------------------
-mpirun -q 0 -np $nnodes -machinefile $confile $APPLICATION $RUNFLAGS';
+mpirun -q 0 -np $nnodes -machinefile $confile $APPLICATION $RUNFLAGS
+';
 system ("qsub $outfile");
